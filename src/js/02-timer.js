@@ -48,7 +48,7 @@ Notiflix.Notify.init({
     borderRadius: '3px',
 })
 function opt() {
-    return options = {
+    const options = {
         enableTime: true,
         time_24hr: true,
         defaultDate: new Date(),
@@ -68,6 +68,7 @@ function opt() {
             }
         },
     }
+    return options;
 }
 
 let calendar = flatpickr(refs.input, opt())
