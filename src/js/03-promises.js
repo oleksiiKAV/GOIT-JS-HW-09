@@ -26,11 +26,19 @@ function createPromise(position, delay) {
 }
 
 const form = document.querySelector('.form');
+
+const delayInput = form.elements.delay;
+const stepInput = form.elements.step;
+const amountInput = form.elements.amount;
+delayInput.setAttribute("min", 0)
+stepInput.setAttribute("min", 0)
+amountInput.setAttribute("min", 0)
+
+
+
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const delayInput = form.elements.delay;
-  const stepInput = form.elements.step;
-  const amountInput = form.elements.amount;
   const delay = Number(delayInput.value);
   const step = Number(stepInput.value);
   const amount = Number(amountInput.value);
